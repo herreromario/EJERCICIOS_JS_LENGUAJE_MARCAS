@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejercicio 4</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+    <p id="parrafo">Parrafo inicial</p>
+    <button id="cambiar" onclick="cambiarTexto()">Cambiar texto</button>
+
+    <script>
+        // Seleccionamos los elementos por su id
+        const parrafo = document.getElementById("parrafo");
+        const boton = document.getElementById("cambiar");
+
+        // Añadimos el evento al botón
+        boton.addEventListener("click", () => {
+            parrafo.innerText = "Texto cambiado";
+        });
+    </script>
+    
+</body>
+</html>

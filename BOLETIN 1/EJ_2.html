@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejercicio 2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h2>Lista con JavaSript</h2>
+
+    <script>
+        // 1. Crear la lista <ul>
+        const lista = document.createElement("ul");
+
+        // 2. Crear y añadir 3 <li>
+        for (let i = 0; i < 3; i++) {
+            const element = document.createElement("li"); // Crea <li>
+            element.innerText = "Elemento " + i;          // pone el texto
+            lista.appendChild(element);                   // lo añade a la lista
+        }
+
+        // 3. Añadir la lista al body
+        document.body.appendChild(lista);
+    </script>
+</body>
+</html>

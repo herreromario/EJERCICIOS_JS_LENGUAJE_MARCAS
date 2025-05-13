@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejercicio 10</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<style>
+    div{
+        width: 300px;
+        display: flex;
+        flex-flow: column;
+    }
+
+    button{
+        height: 50px;
+    }
+</style>
+<body>
+    <div>
+        <img id="miImagen" src="/images/GUANYAR.PNG">
+        <button id="cambiarImagen">PULSA PARA MARTIN</button>
+    </div>
+
+    
+    <script>
+        let imagen = document.getElementById("miImagen");
+        let boton = document.getElementById("cambiarImagen");
+
+        boton.addEventListener("click", function(){
+            imagen.src = "/images/MARTIN.PNG";
+        });
+
+    </script>
+    
+</body>
+</html>

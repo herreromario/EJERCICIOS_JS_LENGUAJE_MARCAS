@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejercicio 11</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<style>
+    .elemento-destacado{
+        background-color: yellow;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <ul id="listaItems">
+        <li>Hola</li>
+        <li>este</li>
+        <li>elemento</li>
+        <li>me</li>
+        <li>lo</li>
+        <li>DESTACADOOO</li>
+    </ul>
+    
+    <script>
+        // Seleccionamos todos los elementos <li> de la lista con id "listaItems"   
+        let lista = document.querySelectorAll("#listaItems li");
+
+        for (let elemento of lista){
+            // Si el contenido del <li> tiene más de 10 carácteres
+                if(elemento.textContent.length > 10){
+                    elemento.classList.add("elemento-destacado") // Le agregamos la clase "elemento destacado"
+                }
+        }
+    </script>
+    
+</body>
+</html>

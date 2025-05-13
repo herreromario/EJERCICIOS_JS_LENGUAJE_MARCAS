@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejercicio 5</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<!--Creamos la clase de estilo para DESTACAR (fondo amarillo y negrita)-->
+<style>
+    .destacado{
+        background-color: yellow;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div id="miDiv">Este es un div</div>
+    <button onclick="alternarClase()">Destacar</button>
+
+    <script>
+
+        function alternarClase(){
+            const div = document.getElementById("miDiv"); // Seleccionamos el div
+            div.classList.toggle("destacado");            // le cambiamos la clase
+        }
+    </script>
+    
+</body>
+</html>

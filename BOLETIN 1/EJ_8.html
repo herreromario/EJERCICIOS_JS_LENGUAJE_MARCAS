@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejercicio 8</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<style>
+    #miDiv{
+        background-color: lightgray;
+        padding: 40px;
+    }
+
+</style>
+<body>
+
+    <div id="miDiv">
+        <button id="miBoton">HAZ CLICK AQUÍ</button>
+    </div>
+
+    <script>
+        let div = document.getElementById("miDiv");
+        let boton = document.getElementById("miBoton");
+
+        div.addEventListener("click", function() {
+            console.log("Div clickeado");
+        });
+
+        boton.addEventListener("click", function(evento) {
+            console.log("Botón clickeado");
+            evento.stopPropagation(); // Detenemos la propagación
+        });
+
+    </script>
+    
+</body>
+</html>

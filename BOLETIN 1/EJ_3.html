@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejercicio 3</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <p id="miId">Este es un parrrafo con ID</p>
+    <p class="miClase">Este es un parrrafo con Clase</p>
+    <p>Este es un parrrafo con Etiqueta</p>
+    
+    <script>
+        // Por ID
+        const porId = document.getElementById("miId");
+        console.log("Por ID: " + porId.innerText);
+
+        // Por Clase
+        const porClase = document.getElementsByClassName("miClase")[0];
+        console.log("Por Clase " + porClase.innerText);
+
+        // Por Etiqueta
+        const porEtiqueta = document.getElementsByTagName("p")[2];
+        console.log("Por Etiqueta: " + porEtiqueta.innerText);
+    </script>
+</body>
+</html>
