@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejercicio 3</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+
+    <h2>Calculadora</h2>
+    <input type="number" id="numeroUno" placeholder="Número 1">
+    <input type="number" id="numeroDos" placeholder="Número 2">
+    <select id="operacion">
+        <option value=""></option>
+        <option value="suma">+</option>
+        <option value="resta">-</option>
+        <option value="multiplica">*</option>
+        <option value="divide">/</option>
+    </select>
+    <button onclick="calcular()">Calcular</button>
+    <h3 id="resultado"></h3>
+</body>
+
+<script>
+    function calcular(){
+        let numUno = parseFloat(document.getElementById("numeroUno").value);
+        let numDos = parseFloat(document.getElementById("numeroDos").value);
+        
+        let operacion = document.getElementById("operacion").value;
+        let resultado;
+
+        if(operacion === "suma"){
+            resultado = numUno + numDos;
+        } else if(operacion === "resta"){
+            resultado = numUno - numDos;
+        } else if(operacion === "multiplica"){
+            resultado = numUno*numDos;
+        } else if(operacion === "divide"){
+            if(numDos === 0){
+                resultado = "Error, no se puede dividir entre '0'."
+            } else{
+                resultado = numUno/numDos;
+            }
+        }
+
+        let res = document.getElementById("resultado");
+        res.textContent = "Resultado: " + resultado;
+
+        document.getElementById("numeroUno").value = "";
+        document.getElementById("numeroDos").value = "";
+    }   
+</script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejercicio 1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<style>
+    div{
+        width: 250px;
+        border: 1px solid black;
+        padding-left: 10px;
+    }
+
+    li{
+        margin-bottom: 10px;
+    }
+
+</style>
+
+<body>
+    <div>
+        <h2>Lista de tareas</h2>
+        <input type="text" id="nuevaTarea" placeholder="Nueva tarea">
+        <button onclick="agregarTarea()">Añadir</button>
+        <ul id="listaTareas"></ul>
+    </div>
+
+</body>
+
+<script>
+    function agregarTarea(){
+        let texto = document.getElementById("nuevaTarea").value;
+        if(texto === "") rerturn;
+
+        let li = document.createElement("li");
+        li.textContent = texto + " ";
+
+        let botonEliminar = document.createElement("button");
+        botonEliminar.textContent = "Eliminar";
+
+        botonEliminar.onclick = function(){
+            li.remove();
+        }
+
+        li.appendChild(botonEliminar);
+        document.getElementById("listaTareas").appendChild(li);
+
+        document.getElementById("nuevaTarea").value = "";
+    }
+
+</script>
+</html>

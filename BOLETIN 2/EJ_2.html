@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejercicio 2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <div>
+        <h2>Galeria de imágenes</h2>
+        <input type="text" id="nuevaImagen" placeholder="URL de la imagen">
+        <button onclick="agregarImagen()">Añadir imagen</button>
+        <div id="galeria"></div>
+    </div>
+
+</body>
+
+<script>
+    function agregarImagen(){
+        let url = document.getElementById("nuevaImagen").value;
+        if(url === "") return;
+
+        let contenedor = document.createElement("div");
+
+        let imagen = document.createElement("img");
+        imagen.src = url;
+        imagen.width = 200;   
+
+        let botonEliminar = document.createElement("button");
+        botonEliminar.textContent = "Eliminar";
+
+        botonEliminar.onclick = function(){
+            contenedor.remove();
+        }
+
+        contenedor.appendChild(imagen);
+        contenedor.appendChild(botonEliminar);
+
+        document.getElementById("galeria").appendChild(contenedor);
+
+        document.getElementById("nuevaImagen").value = "";
+    }
+
+</script>
+</html>

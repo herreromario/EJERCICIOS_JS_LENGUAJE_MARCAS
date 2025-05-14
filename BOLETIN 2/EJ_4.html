@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejercicio 4</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <h2 id="numeroPregunta">Trivial</h2>
+    <div id="preguntaActual"></div>
+</body>
+
+<script>
+    let preguntas = [
+        {
+            texto: "¿Cuál es la capital de Francia?",
+            opciones: ["Madrid", "París", "Londres"],
+            correcta: "París"
+        }, 
+        {
+            texto: "¿Cuánto es 2x3?",
+            opciones: ["5", "1", "6"],
+            correcta: "6"
+        } 
+    ];
+
+    let indice = 0;
+
+    function mostrarPreguntas(){
+        let contenedor = document.getElementById("preguntaActual");
+        contenedor.innerHTML = "";
+
+        if(indice>= preguntas.length) {
+            contenedor.textContent = "¡Has terminado el trivial!"
+            return;
+        }
+
+        let pregunta = preguntas[indice];
+
+        let parrafo = document.createElement("p");
+
+        parrafo.textContent = pregunta.texto;
+        contenedor.appendChild(parrafo);
+        
+        for (let i = 0; i < pregunta.opciones.length; i++) {
+            let opcion = pregunta.opciones[i];
+            let boton = document.createElement("button");
+            boton.textContent = opcion;
+
+            boton.onclick = crearManejadorRespuesta(opcion, pregunta.correcta);
+
+            contenedor.appendChild(boton);
+        }
+    }
+
+    function crearManejadorRespuesta(opcionSeleccionada, respuestaCorrecta){
+        return function(){
+            let resultado = document.createElement("p");
+
+            if(opcionSeleccionada === respuestaCorrecta){
+                resultado.textContent = "¡Correcto!";
+            } else{
+                resultado.textContent = "¡Incorrecto!";
+            }
+
+            let contenedor = document.getElementById("preguntaActual");
+            contenedor.appendChild(resultado);
+
+            indice++;
+
+            setTimeout(function() {
+                mostrarPreguntas();
+            }, 1000);
+        };
+    }
+
+    mostrarPreguntas();
+
+</script>
+</html>
