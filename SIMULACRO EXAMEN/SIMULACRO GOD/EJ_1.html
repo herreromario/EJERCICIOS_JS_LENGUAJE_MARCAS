@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <input id="nombre" type="text" placeholder="Nombre">
+    <button id="miBoton">COMPROBAR</button>
+    <div id="miDiv">
+        <p id="resultado"></p>
+    </div>
+</body>
+
+<script>
+    let boton = document.getElementById("miBoton");
+
+    let nombres = ["Juan", "Lucia", "Carlos", "Ana"];
+
+    boton.addEventListener("click", function comprobar() {
+
+        let intento = document.getElementById("nombre").value;
+        let res = document.getElementById("resultado");
+
+        if (nombres.includes(intento)) {
+            res.innerText = "Acceso permitido";
+        } else {
+            res.innerText = "Acceso denegado";
+        }
+    });
+
+</script>
+
+</html>

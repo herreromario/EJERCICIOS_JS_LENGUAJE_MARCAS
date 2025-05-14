@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 1</title>
+    </head>
+
+    <body>
+        <p id="miParrafo">Este parrafo está sin tocar</p>
+        <button onclick="cambiarParrafo()">PULSA AQUÍ</button>
+    </body>
+
+    <script>
+        function cambiarParrafo(){
+            let p = document.getElementById("miParrafo");
+            p.innerHTML = "Texto actualizado desde JavaScript";
+        }
+    </script>
+</html>

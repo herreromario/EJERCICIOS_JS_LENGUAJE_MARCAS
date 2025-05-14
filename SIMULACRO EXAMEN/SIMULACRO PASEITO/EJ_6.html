@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 6</title>
+    </head>
+
+    <body>
+        <a id="enlace" href="https://www.google.com">PULSA PARA ABRIR GOOGLE</a>
+    </body>
+
+    <script>
+        let enlace = document.getElementById("enlace");
+
+        enlace.addEventListener("click", function(){
+            event.preventDefault();
+            alert("Navegacion cancelada");
+        })
+    </script>
+</html>

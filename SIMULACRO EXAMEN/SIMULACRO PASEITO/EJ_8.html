@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 8</title>
+    </head>
+
+    <body>
+        <button onclick="nacimiento()">HACER MÁGIA</button>
+        <div id="contenedor"></div>
+    </body>
+
+    <script>
+        function nacimiento(){
+            let div = document.getElementById("contenedor");
+            div.innerHTML = `
+            <p>Hola desde JS</p>
+            <ul>
+                <li>Uno</li>
+                <li>Dos</li>
+            </ul> `
+        }
+    </script>
+</html>

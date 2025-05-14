@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 4</title>
+    </head>
+
+    <style>
+        .activo{
+            background-color: lightsalmon;
+        }
+    </style>
+
+    <body>
+        <div id="miDiv">
+            ESTO ES UN DIV
+        </div>
+        <button onclick="cambiarColor()">PULSAME PARA AÑADIR COLOR</button>
+    </body>
+
+    <script>
+        function cambiarColor(){
+            let div = document.getElementById("miDiv");
+            div.classList.toggle("activo");
+        }
+    </script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 2</title>
+    </head>
+
+    <body>
+        <ul id="miLista">
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+        </ul>
+        <button id="miBoton">PULSA AQUÍ</button>
+    </body>
+
+    <script>
+        let boton = document.getElementById("miBoton");
+        boton.addEventListener("click", function(){
+            let lista = document.getElementById("miLista");
+            let item = document.createElement("li");
+            item.textContent = "Nuevo item";
+            lista.appendChild(item);
+        })
+    </script>
+</html>

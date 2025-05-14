@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 7</title>
+    </head>
+
+    <body>
+        <p id="borrame">A ESTE PARRAFO LE QUEDAN DOS TELEDIARIOS</p>
+        <button onclick="destruccion()">BORRAR</button>
+    </body>
+
+    <script>
+        function destruccion(){
+            let parrafo = document.getElementById("borrame");
+            parrafo.remove();
+        }
+    </script>
+</html>

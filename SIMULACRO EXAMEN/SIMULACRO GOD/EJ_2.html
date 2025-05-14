@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+    <h1>Lista de la compra</h1>
+    <ul id="miLista">
+
+    </ul>
+
+    <input id="nuevoItem" type="text" placeholder="¿Qué falta por comprar?">
+    <button id="añadir">AÑADIR A LA LISTA</button>
+    <div id="miDiv">
+        <p id="mensaje"></p>
+    </div>
+</body>
+
+<script>
+    let listaCompra = document.getElementById("miLista");
+    let listaGuardada = [];
+    let boton = document.getElementById("añadir");
+    let resultado = document.getElementById("mensaje")
+
+    boton.addEventListener("click", function añadir() {
+
+        let nuevoItem = document.getElementById("nuevoItem").value.trim();
+
+        if (nuevoItem === "") return;
+
+        if (listaGuardada.includes(nuevoItem)) {
+            mensaje.innerText = "Elemento duplicado";
+
+        } else {
+            let li = document.createElement("li");
+            li.innerText = nuevoItem;
+            listaCompra.appendChild(li);
+            listaGuardada.push(nuevoItem);
+        }
+        
+        document.getElementById("nuevoItem").value = "";
+    });
+
+
+</script>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 3</title>
+    </head>
+
+    <body>
+        <p id="uno" class="rojo">Texto uno</p>
+        <p class="rojo">Texto dos</p>
+        <p>Texto tres</p>
+
+    </body>
+
+    <script>
+        let t1 = document.getElementById("uno");
+        console.log(t1.innerText);
+
+        let t2 = document.getElementsByClassName("rojo")[0];
+        console.log(t2.innerText);
+
+        let t3 = document.getElementsByTagName("p")[2];
+        console.log(t3.innerText);
+    </script>
+</html>
